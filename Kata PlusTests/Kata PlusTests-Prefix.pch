@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Kata PlusTests' target in the 'Kata PlusTests' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif

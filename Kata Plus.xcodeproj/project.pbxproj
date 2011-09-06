@@ -1,0 +1,461 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22E003291415B5C300D96D3F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E003281415B5C300D96D3F /* UIKit.framework */; };
+		22E0032B1415B5C300D96D3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E0032A1415B5C300D96D3F /* Foundation.framework */; };
+		22E0032D1415B5C300D96D3F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E0032C1415B5C300D96D3F /* CoreGraphics.framework */; };
+		22E003331415B5C300D96D3F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22E003311415B5C300D96D3F /* InfoPlist.strings */; };
+		22E003361415B5C300D96D3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E003351415B5C300D96D3F /* main.m */; };
+		22E003391415B5C300D96D3F /* Kata_PlusAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E003381415B5C300D96D3F /* Kata_PlusAppDelegate.m */; };
+		22E0033C1415B5C300D96D3F /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E0033A1415B5C300D96D3F /* MainWindow.xib */; };
+		22E0033F1415B5C300D96D3F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E0033E1415B5C300D96D3F /* RootViewController.m */; };
+		22E003421415B5C300D96D3F /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E003401415B5C300D96D3F /* RootViewController.xib */; };
+		22E003491415B5C300D96D3F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E003281415B5C300D96D3F /* UIKit.framework */; };
+		22E0034A1415B5C300D96D3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E0032A1415B5C300D96D3F /* Foundation.framework */; };
+		22E0034B1415B5C300D96D3F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E0032C1415B5C300D96D3F /* CoreGraphics.framework */; };
+		22E003531415B5C300D96D3F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22E003511415B5C300D96D3F /* InfoPlist.strings */; };
+		22E003561415B5C300D96D3F /* Kata_PlusTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 22E003551415B5C300D96D3F /* Kata_PlusTests.h */; };
+		22E003581415B5C300D96D3F /* Kata_PlusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E003571415B5C300D96D3F /* Kata_PlusTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		22E0034C1415B5C300D96D3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22E0031B1415B5C300D96D3F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22E003231415B5C300D96D3F;
+			remoteInfo = "Kata Plus";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		22E003241415B5C300D96D3F /* Kata Plus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kata Plus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22E003281415B5C300D96D3F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		22E0032A1415B5C300D96D3F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		22E0032C1415B5C300D96D3F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		22E003301415B5C300D96D3F /* Kata Plus-Info.plist */ = {isa = PBXFileReference; path = "Kata Plus-Info.plist"; sourceTree = "<group>"; };
+		22E003321415B5C300D96D3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		22E003341415B5C300D96D3F /* Kata Plus-Prefix.pch */ = {isa = PBXFileReference; path = "Kata Plus-Prefix.pch"; sourceTree = "<group>"; };
+		22E003351415B5C300D96D3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		22E003371415B5C300D96D3F /* Kata_PlusAppDelegate.h */ = {isa = PBXFileReference; path = Kata_PlusAppDelegate.h; sourceTree = "<group>"; };
+		22E003381415B5C300D96D3F /* Kata_PlusAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Kata_PlusAppDelegate.m; sourceTree = "<group>"; };
+		22E0033B1415B5C300D96D3F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		22E0033D1415B5C300D96D3F /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
+		22E0033E1415B5C300D96D3F /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		22E003411415B5C300D96D3F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+		22E003481415B5C300D96D3F /* Kata PlusTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kata PlusTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22E003501415B5C300D96D3F /* Kata PlusTests-Info.plist */ = {isa = PBXFileReference; path = "Kata PlusTests-Info.plist"; sourceTree = "<group>"; };
+		22E003521415B5C300D96D3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		22E003541415B5C300D96D3F /* Kata PlusTests-Prefix.pch */ = {isa = PBXFileReference; path = "Kata PlusTests-Prefix.pch"; sourceTree = "<group>"; };
+		22E003551415B5C300D96D3F /* Kata_PlusTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Kata_PlusTests.h; sourceTree = "<group>"; };
+		22E003571415B5C300D96D3F /* Kata_PlusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Kata_PlusTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22E003211415B5C300D96D3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22E003291415B5C300D96D3F /* UIKit.framework in Frameworks */,
+				22E0032B1415B5C300D96D3F /* Foundation.framework in Frameworks */,
+				22E0032D1415B5C300D96D3F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22E003441415B5C300D96D3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22E003491415B5C300D96D3F /* UIKit.framework in Frameworks */,
+				22E0034A1415B5C300D96D3F /* Foundation.framework in Frameworks */,
+				22E0034B1415B5C300D96D3F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22E003191415B5C300D96D3F = {
+			isa = PBXGroup;
+			children = (
+				22E0032E1415B5C300D96D3F /* Kata Plus */,
+				22E0034E1415B5C300D96D3F /* Kata PlusTests */,
+				22E003271415B5C300D96D3F /* Frameworks */,
+				22E003251415B5C300D96D3F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		22E003251415B5C300D96D3F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22E003241415B5C300D96D3F /* Kata Plus.app */,
+				22E003481415B5C300D96D3F /* Kata PlusTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22E003271415B5C300D96D3F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22E003281415B5C300D96D3F /* UIKit.framework */,
+				22E0032A1415B5C300D96D3F /* Foundation.framework */,
+				22E0032C1415B5C300D96D3F /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		22E0032E1415B5C300D96D3F /* Kata Plus */ = {
+			isa = PBXGroup;
+			children = (
+				22E003371415B5C300D96D3F /* Kata_PlusAppDelegate.h */,
+				22E003381415B5C300D96D3F /* Kata_PlusAppDelegate.m */,
+				22E0033A1415B5C300D96D3F /* MainWindow.xib */,
+				22E0033D1415B5C300D96D3F /* RootViewController.h */,
+				22E0033E1415B5C300D96D3F /* RootViewController.m */,
+				22E003401415B5C300D96D3F /* RootViewController.xib */,
+				22E0032F1415B5C300D96D3F /* Supporting Files */,
+			);
+			path = "Kata Plus";
+			sourceTree = "<group>";
+		};
+		22E0032F1415B5C300D96D3F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				22E003301415B5C300D96D3F /* Kata Plus-Info.plist */,
+				22E003311415B5C300D96D3F /* InfoPlist.strings */,
+				22E003341415B5C300D96D3F /* Kata Plus-Prefix.pch */,
+				22E003351415B5C300D96D3F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		22E0034E1415B5C300D96D3F /* Kata PlusTests */ = {
+			isa = PBXGroup;
+			children = (
+				22E003551415B5C300D96D3F /* Kata_PlusTests.h */,
+				22E003571415B5C300D96D3F /* Kata_PlusTests.m */,
+				22E0034F1415B5C300D96D3F /* Supporting Files */,
+			);
+			path = "Kata PlusTests";
+			sourceTree = "<group>";
+		};
+		22E0034F1415B5C300D96D3F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				22E003501415B5C300D96D3F /* Kata PlusTests-Info.plist */,
+				22E003511415B5C300D96D3F /* InfoPlist.strings */,
+				22E003541415B5C300D96D3F /* Kata PlusTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		22E003231415B5C300D96D3F /* Kata Plus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22E0035B1415B5C300D96D3F /* Build configuration list for PBXNativeTarget "Kata Plus" */;
+			buildPhases = (
+				22E003201415B5C300D96D3F /* Sources */,
+				22E003211415B5C300D96D3F /* Frameworks */,
+				22E003221415B5C300D96D3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Kata Plus";
+			productName = "Kata Plus";
+			productReference = 22E003241415B5C300D96D3F /* Kata Plus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		22E003471415B5C300D96D3F /* Kata PlusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22E0035E1415B5C300D96D3F /* Build configuration list for PBXNativeTarget "Kata PlusTests" */;
+			buildPhases = (
+				22E003431415B5C300D96D3F /* Sources */,
+				22E003441415B5C300D96D3F /* Frameworks */,
+				22E003451415B5C300D96D3F /* Resources */,
+				22E003461415B5C300D96D3F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22E0034D1415B5C300D96D3F /* PBXTargetDependency */,
+			);
+			name = "Kata PlusTests";
+			productName = "Kata PlusTests";
+			productReference = 22E003481415B5C300D96D3F /* Kata PlusTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22E0031B1415B5C300D96D3F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = NA;
+			};
+			buildConfigurationList = 22E0031E1415B5C300D96D3F /* Build configuration list for PBXProject "Kata Plus" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 22E003191415B5C300D96D3F;
+			productRefGroup = 22E003251415B5C300D96D3F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22E003231415B5C300D96D3F /* Kata Plus */,
+				22E003471415B5C300D96D3F /* Kata PlusTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22E003221415B5C300D96D3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22E003331415B5C300D96D3F /* InfoPlist.strings in Resources */,
+				22E0033C1415B5C300D96D3F /* MainWindow.xib in Resources */,
+				22E003421415B5C300D96D3F /* RootViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22E003451415B5C300D96D3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22E003531415B5C300D96D3F /* InfoPlist.strings in Resources */,
+				22E003561415B5C300D96D3F /* Kata_PlusTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22E003461415B5C300D96D3F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22E003201415B5C300D96D3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22E003361415B5C300D96D3F /* main.m in Sources */,
+				22E003391415B5C300D96D3F /* Kata_PlusAppDelegate.m in Sources */,
+				22E0033F1415B5C300D96D3F /* RootViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22E003431415B5C300D96D3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22E003581415B5C300D96D3F /* Kata_PlusTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22E0034D1415B5C300D96D3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22E003231415B5C300D96D3F /* Kata Plus */;
+			targetProxy = 22E0034C1415B5C300D96D3F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		22E003311415B5C300D96D3F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22E003321415B5C300D96D3F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		22E0033A1415B5C300D96D3F /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22E0033B1415B5C300D96D3F /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		22E003401415B5C300D96D3F /* RootViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22E003411415B5C300D96D3F /* en */,
+			);
+			name = RootViewController.xib;
+			sourceTree = "<group>";
+		};
+		22E003511415B5C300D96D3F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22E003521415B5C300D96D3F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		22E003591415B5C300D96D3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		22E0035A1415B5C300D96D3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		22E0035C1415B5C300D96D3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Kata Plus/Kata Plus-Prefix.pch";
+				INFOPLIST_FILE = "Kata Plus/Kata Plus-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		22E0035D1415B5C300D96D3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Kata Plus/Kata Plus-Prefix.pch";
+				INFOPLIST_FILE = "Kata Plus/Kata Plus-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		22E0035F1415B5C300D96D3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Kata Plus.app/Kata Plus";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Kata PlusTests/Kata PlusTests-Prefix.pch";
+				INFOPLIST_FILE = "Kata PlusTests/Kata PlusTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		22E003601415B5C300D96D3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Kata Plus.app/Kata Plus";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Kata PlusTests/Kata PlusTests-Prefix.pch";
+				INFOPLIST_FILE = "Kata PlusTests/Kata PlusTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22E0031E1415B5C300D96D3F /* Build configuration list for PBXProject "Kata Plus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22E003591415B5C300D96D3F /* Debug */,
+				22E0035A1415B5C300D96D3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22E0035B1415B5C300D96D3F /* Build configuration list for PBXNativeTarget "Kata Plus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22E0035C1415B5C300D96D3F /* Debug */,
+				22E0035D1415B5C300D96D3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		22E0035E1415B5C300D96D3F /* Build configuration list for PBXNativeTarget "Kata PlusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22E0035F1415B5C300D96D3F /* Debug */,
+				22E003601415B5C300D96D3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 22E0031B1415B5C300D96D3F /* Project object */;
+}
