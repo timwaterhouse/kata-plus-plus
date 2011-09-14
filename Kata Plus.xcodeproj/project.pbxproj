@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		229EE8251420F2520023754E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229EE8241420F2520023754E /* StoreKit.framework */; };
 		22E003291415B5C300D96D3F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E003281415B5C300D96D3F /* UIKit.framework */; };
 		22E0032B1415B5C300D96D3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E0032A1415B5C300D96D3F /* Foundation.framework */; };
 		22E0032D1415B5C300D96D3F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E0032C1415B5C300D96D3F /* CoreGraphics.framework */; };
@@ -97,6 +98,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		229EE8241420F2520023754E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		22E003241415B5C300D96D3F /* Kata Plus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kata Plus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22E003281415B5C300D96D3F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		22E0032A1415B5C300D96D3F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -231,6 +233,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				229EE8251420F2520023754E /* StoreKit.framework in Frameworks */,
 				22E0041B1415BDF700D96D3F /* MessageUI.framework in Frameworks */,
 				22E004191415BDF100D96D3F /* SystemConfiguration.framework in Frameworks */,
 				22E004171415BDEB00D96D3F /* QuartzCore.framework in Frameworks */,
@@ -265,6 +268,7 @@
 		22E003191415B5C300D96D3F = {
 			isa = PBXGroup;
 			children = (
+				229EE8241420F2520023754E /* StoreKit.framework */,
 				22E0032E1415B5C300D96D3F /* Kata Plus */,
 				22E0034E1415B5C300D96D3F /* Kata PlusTests */,
 				22E003271415B5C300D96D3F /* Frameworks */,

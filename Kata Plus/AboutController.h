@@ -7,19 +7,27 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <StoreKit/StoreKit.h>
+
 //#import <MessageUI/MessageUI.h>
 //#import <MessageUI/MFMailComposeViewController.h>
 
 
 //@interface AboutController : UIViewController <UIWebViewDelegate, MFMailComposeViewControllerDelegate> {
-@interface AboutController : UIViewController <UIWebViewDelegate> {
+@interface AboutController : UIViewController <UIWebViewDelegate, SKProductsRequestDelegate, SKPaymentTransactionObserver> {
 	UIWebView *webView;
 	UILabel *version;
 	UISwitch *adSwitch;
+    UIActivityIndicatorView *spinner;
+    UIView *dimView;
 }
 @property (nonatomic, retain) IBOutlet UIWebView *webView;
 @property (nonatomic, retain) IBOutlet UILabel *version;
 @property (nonatomic, retain) IBOutlet UISwitch *adSwitch;
+@property (nonatomic, retain) IBOutlet UIButton *adButton;
+@property (nonatomic, retain) IBOutlet UIActivityIndicatorView *spinner;
+@property (nonatomic, retain) UIView *dimView;
 - (IBAction)backgroundTap:(id)sender;
 - (IBAction)switchChanged:(id)sender;
+- (IBAction)adButtonPressed:(id)sender;
 @end

@@ -10,7 +10,7 @@
 
 
 @implementation AboutController
-@synthesize webView, version, adSwitch;
+@synthesize webView, version, adSwitch, adButton, spinner, dimView;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -26,6 +26,16 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    if ([SKPaymentQueue canMakePayments]) {
+		NSLog(@"In-App Purchases are enabled");
+		
+		SKProductsRequest *productsRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:[NSSet setWithObject:@"com.obdurodon.kata.removeads"]];
+		productsRequest.delegate = self;
+		[productsRequest start];
+	} else {
+		NSLog(@"In-App Purchases are disabled");
+	}
 	
 //	NSString *htmlString = [[NSString alloc] init];
     NSString *htmlString;
@@ -54,6 +64,14 @@
 	version.text = [@"Version " stringByAppendingString:theVersion];
 	
 	adSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"showAds"];
+	adButton.hidden = ![[NSUserDefaults standardUserDefaults] boolForKey:@"showAds"];
+    
+    dimView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 460)];
+    dimView.backgroundColor = [UIColor blackColor];
+    dimView.alpha = 0.0f;
+    dimView.userInteractionEnabled = NO;
+    [self.view addSubview:dimView];
+
 }
 
 - (IBAction)backgroundTap:(id)sender {
@@ -89,6 +107,93 @@
 	[[NSUserDefaults standardUserDefaults] synchronize];
 }
 
+- (IBAction)adButtonPressed:(id)sender
+{
+    SKPayment *payment = [SKPayment paymentWithProductIdentifier:@"com.obdurodon.kata.removeads"];
+	[[SKPaymentQueue defaultQueue] addTransactionObserver:self];
+	[[SKPaymentQueue defaultQueue] addPayment:payment];
+}
+
+- (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response {
+	SKProduct *validProduct = nil;
+	int count = [response.products count];
+	if (count > 0) {
+		validProduct = [response.products objectAtIndex:0];
+	} else if (!validProduct) {
+		NSLog(@"No products available");
+	}
+    
+    if (validProduct)
+    {
+        NSLog(@"Product title: %@" , validProduct.localizedTitle);
+        NSLog(@"Product description: %@" , validProduct.localizedDescription);
+        NSLog(@"Product price: %@" , validProduct.price);
+        NSLog(@"Product id: %@" , validProduct.productIdentifier);
+        NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+        [numberFormatter setFormatterBehavior:NSNumberFormatterBehavior10_4];
+        [numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+        [numberFormatter setLocale:validProduct.priceLocale];
+        NSString *formattedString = [numberFormatter stringFromNumber:validProduct.price];
+        [numberFormatter release];
+        NSLog(@"Localised Product price: %@" , formattedString);
+    }
+    
+    for (NSString *invalidProductId in response.invalidProductIdentifiers)
+    {
+        NSLog(@"Invalid product id: %@" , invalidProductId);
+    }
+
+}
+
+- (void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray *)transactions {
+	for (SKPaymentTransaction *transaction in transactions) {
+		switch (transaction.transactionState) {
+			case SKPaymentTransactionStatePurchasing:
+                [spinner startAnimating];
+                dimView.alpha = 0.3f;
+                self.view.userInteractionEnabled = NO;
+
+				break;
+				
+			case SKPaymentTransactionStatePurchased:
+                [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"showAds"];
+                [[NSUserDefaults standardUserDefaults] synchronize];
+                adButton.hidden = YES;
+				
+				[[SKPaymentQueue defaultQueue] finishTransaction:transaction];
+				
+                [spinner stopAnimating];
+                dimView.alpha = 0.0f;
+                self.view.userInteractionEnabled = YES;
+				break;
+				
+			case SKPaymentTransactionStateRestored:
+                [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"showAds"];
+                [[NSUserDefaults standardUserDefaults] synchronize];
+                adButton.hidden = YES;
+				
+				[[SKPaymentQueue defaultQueue] finishTransaction:transaction];
+				
+                [spinner stopAnimating];
+                dimView.alpha = 0.0f;
+                self.view.userInteractionEnabled = YES;
+				break;
+				
+			case SKPaymentTransactionStateFailed:
+				if (transaction.error.code != SKErrorPaymentCancelled) {
+					NSLog(@"An error encounterd");
+				}
+				
+				[[SKPaymentQueue defaultQueue] finishTransaction:transaction];
+				
+                [spinner stopAnimating];
+                dimView.alpha = 0.0f;
+                self.view.userInteractionEnabled = YES;
+				break;
+		}
+	}
+}
+
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
@@ -100,6 +205,9 @@
 	self.webView = nil;
 	self.version = nil;
 	self.adSwitch = nil;
+    self.adButton = nil;
+    self.spinner = nil;
+    self.dimView = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -110,6 +218,9 @@
 	[webView release];
 	[version release];
 	[adSwitch release];
+    [adButton release];
+    [spinner release];
+    [dimView release];
     [super dealloc];
 }
 
