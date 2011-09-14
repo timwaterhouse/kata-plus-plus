@@ -15,7 +15,7 @@
     [super layoutSubviews];
     self.textLabel.frame = CGRectMake(self.textLabel.frame.origin.x, 
                                       self.textLabel.frame.origin.y, 
-                                      220.0, 
+                                      225.0, 
                                       self.textLabel.frame.size.height);
     self.detailTextLabel.frame = CGRectMake(230.0, 
                                             self.detailTextLabel.frame.origin.y, 
