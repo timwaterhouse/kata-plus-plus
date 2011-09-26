@@ -27,6 +27,24 @@
     [self.window makeKeyAndVisible];
 	
 	[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObject:@"YES" forKey:@"showAds"]];
+    
+    NSInteger count = [[NSUserDefaults standardUserDefaults] integerForKey:@"launchCount"];
+    count++;
+    if (count == 3) {
+        UIAlertView *removeAdsAlert = [[UIAlertView alloc]
+                                       initWithTitle:nil
+                                       message:@"Don't want to see ads? You can remove them \
+via an In-App Purchase, available from the info screen. \
+Tap the ‘i’ button in the top left to get there!"
+                                       delegate:self
+                                       cancelButtonTitle:@"OK"
+                                       otherButtonTitles:nil];
+        [removeAdsAlert show];
+        [removeAdsAlert release];
+        [[NSUserDefaults standardUserDefaults] setInteger:count forKey:@"launchCount"];
+    } else if (count < 3) {
+        [[NSUserDefaults standardUserDefaults] setInteger:count forKey:@"launchCount"];
+    }
 	
     return YES;
 }
