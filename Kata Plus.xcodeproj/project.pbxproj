@@ -74,7 +74,7 @@
 		22E003FA1415BC7F00D96D3F /* CSerializedJSONData.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E003F01415BC7F00D96D3F /* CSerializedJSONData.m */; };
 		22E004041415BCA000D96D3F /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E004021415BCA000D96D3F /* libGoogleAdMobAds.a */; };
 		22E004051415BCA000D96D3F /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 22E004031415BCA000D96D3F /* README.txt */; };
-		22E004071415BD1B00D96D3F /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E004061415BD1B00D96D3F /* iAd.framework */; };
+		22E004071415BD1B00D96D3F /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E004061415BD1B00D96D3F /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		22E004091415BD8C00D96D3F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E004081415BD8C00D96D3F /* CoreLocation.framework */; };
 		22E0040B1415BDBC00D96D3F /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E0040A1415BDBC00D96D3F /* AddressBook.framework */; };
 		22E0040D1415BDC300D96D3F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E0040C1415BDC300D96D3F /* AudioToolbox.framework */; };
