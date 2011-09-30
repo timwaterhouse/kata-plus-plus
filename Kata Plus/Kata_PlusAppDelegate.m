@@ -30,7 +30,9 @@
     
     NSInteger count = [[NSUserDefaults standardUserDefaults] integerForKey:@"launchCount"];
     count++;
-    if (count == 3) {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    BOOL showAds = [defaults boolForKey:@"showAds"];
+    if ((count == 3) & showAds) {
         UIAlertView *removeAdsAlert = [[UIAlertView alloc]
                                        initWithTitle:nil
                                        message:@"Don't want to see ads? You can remove them \
