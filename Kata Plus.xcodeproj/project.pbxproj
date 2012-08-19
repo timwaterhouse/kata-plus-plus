@@ -564,6 +564,7 @@
 		22E0031B1415B5C300D96D3F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0440;
 				ORGANIZATIONNAME = NA;
 			};
 			buildConfigurationList = 22E0031E1415B5C300D96D3F /* Build configuration list for PBXProject "Kata Plus" */;
@@ -744,6 +745,7 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kata Plus/Kata Plus-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Kata Plus/Kata Plus-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				LIBRARY_SEARCH_PATHS = (
@@ -768,6 +770,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kata PlusTests/Kata PlusTests-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Kata PlusTests/Kata PlusTests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -820,6 +823,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kata Plus/Kata Plus-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Kata Plus/Kata Plus-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				LIBRARY_SEARCH_PATHS = (
@@ -827,7 +831,7 @@
 					"\"$(SRCROOT)/Kata Plus/GoogleAdMobAdsSDK\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AE86D78F-FB8B-4285-BDB0-D4F5737029CE";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A89803A7-2EBD-4088-8804-629409DED09D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -839,6 +843,7 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kata Plus/Kata Plus-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Kata Plus/Kata Plus-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				LIBRARY_SEARCH_PATHS = (
@@ -862,6 +867,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kata PlusTests/Kata PlusTests-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Kata PlusTests/Kata PlusTests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -884,6 +890,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kata PlusTests/Kata PlusTests-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Kata PlusTests/Kata PlusTests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-framework",

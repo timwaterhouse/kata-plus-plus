@@ -453,6 +453,16 @@ targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath
 	return betterIndexPath;
 }
 
+- (UITableViewCellEditingStyle)tableView:(UITableView *)aTableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Detemine if it's in editing mode
+//    if (self.editing) {
+    if (self.editing | ([indexPath section]!=kAddNewSection)) {
+        return UITableViewCellEditingStyleDelete;
+    } else {
+        return UITableViewCellEditingStyleNone;
+    }
+}
+
 
 - (void)setEditing:(BOOL)flag animated:(BOOL)animated {
 	[super setEditing:flag animated:animated];
@@ -576,7 +586,7 @@ targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath
 	}
 }	
 
-- (int)getBannerHeight:(UIDeviceOrientation)orientation {
+- (int)getBannerHeight:(UIInterfaceOrientation)orientation {
 	return [_adBannerView actualAdSize].height;
     //	if (UIInterfaceOrientationIsLandscape(orientation)) {
     //		return 32;
@@ -590,7 +600,7 @@ targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath
 	return [self getBannerHeight:UIInterfaceOrientationPortrait];
 }
 
-- (int)getBannerOriginY:(UIDeviceOrientation)orientation {
+- (int)getBannerOriginY:(UIInterfaceOrientation)orientation {
     //	return kScreenWidth - kStatusBarHeight - (kNavigationBarHeight - 12) - [_adBannerView actualAdSize].height;
 	if (UIInterfaceOrientationIsLandscape(orientation)) {
 		return kScreenWidth - kStatusBarHeight - (kNavigationBarHeight - 12) - [_adBannerView actualAdSize].height;

@@ -62,12 +62,12 @@
 	if (self.newKata) {
 		NSArray *allControllers = self.navigationController.viewControllers;
 		UITableViewController *parent = [allControllers objectAtIndex:0];
-		[((RootViewController *)parent).kataArray addObject:kata];
+		[((RootViewController *)parent).kataArray insertObject:kata atIndex:0];
 	}
 	if (self.newTechnique) {
 		NSArray *allControllers = self.navigationController.viewControllers;
 		UITableViewController *parent = [allControllers objectAtIndex:0];
-		[((RootViewController *)parent).techniqueArray addObject:kata];
+		[((RootViewController *)parent).techniqueArray insertObject:kata atIndex:0];
 	}
 //	[self.navigationController popViewControllerAnimated:YES];
 	[self.navigationController popToRootViewControllerAnimated:YES];
