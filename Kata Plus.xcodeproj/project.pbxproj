@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2290079016121D7B00C90A5A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2290078F16121D7B00C90A5A /* Default-568h@2x.png */; };
 		229EE8251420F2520023754E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229EE8241420F2520023754E /* StoreKit.framework */; };
 		22E003291415B5C300D96D3F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E003281415B5C300D96D3F /* UIKit.framework */; };
 		22E0032B1415B5C300D96D3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E0032A1415B5C300D96D3F /* Foundation.framework */; };
@@ -98,6 +99,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2290078F16121D7B00C90A5A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		229EE8241420F2520023754E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		22E003241415B5C300D96D3F /* Kata Plus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kata Plus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22E003281415B5C300D96D3F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -268,6 +270,7 @@
 		22E003191415B5C300D96D3F = {
 			isa = PBXGroup;
 			children = (
+				2290078F16121D7B00C90A5A /* Default-568h@2x.png */,
 				229EE8241420F2520023754E /* StoreKit.framework */,
 				22E0032E1415B5C300D96D3F /* Kata Plus */,
 				22E0034E1415B5C300D96D3F /* Kata PlusTests */,
@@ -608,6 +611,7 @@
 				22E003931415B7A600D96D3F /* MainWindow.xib in Resources */,
 				22E003D51415BC2E00D96D3F /* AdWhirlWebBrowser.xib in Resources */,
 				22E004051415BCA000D96D3F /* README.txt in Resources */,
+				2290079016121D7B00C90A5A /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

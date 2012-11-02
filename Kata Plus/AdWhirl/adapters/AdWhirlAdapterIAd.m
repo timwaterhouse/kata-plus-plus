@@ -18,6 +18,7 @@
 
  */
 
+#import <iAd/iAd.h>
 #import "AdWhirlAdapterIAd.h"
 #import "AdWhirlAdNetworkConfig.h"
 #import "AdWhirlView.h"
