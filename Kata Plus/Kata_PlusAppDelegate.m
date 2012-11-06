@@ -25,18 +25,25 @@ void uncaughtExceptionHandler(NSException *exception) {
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
-    [Flurry startSession:@"VNRB7HJ4RX5SZVN6N4Y2"];
+	[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObject:@"YES" forKey:@"showAds"]];
+	[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObject:@"YES" forKey:@"track"]];
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"track"]) {
+        NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+//        [Flurry startSession:@"KK8BBX79C5HNNJB4GDS4"];  // test API key
+        [Flurry startSession:@"VNRB7HJ4RX5SZVN6N4Y2"];  // real API key
+        NSLog(@"tracking");
+
+    } else {
+        NSLog(@"not tracking");
+    }
     // Override point for customization after application launch.
     
     // Add the navigation controller's view to the window and display.
     [self.window addSubview:navigationController.view];
     [self.window makeKeyAndVisible];
 	
-	[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObject:@"YES" forKey:@"showAds"]];
-	[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObject:@"YES" forKey:@"track"]];
-    
-    NSInteger count = [[NSUserDefaults standardUserDefaults] integerForKey:@"launchCount"];
+    NSInteger count = [[NSUserDefaults standardUserDefaults] integerForKey:@"launchCount2"];
     count++;
 	BOOL showAds = [[NSUserDefaults standardUserDefaults] boolForKey:@"showAds"];
     if ((count == 3) & showAds) {
@@ -51,9 +58,9 @@ Even better, leave me a review on the App Store!"
                                        otherButtonTitles:@"Review", nil];
         [removeAdsAlert show];
         [removeAdsAlert release];
-        [[NSUserDefaults standardUserDefaults] setInteger:count forKey:@"launchCount"];
+        [[NSUserDefaults standardUserDefaults] setInteger:count forKey:@"launchCount2"];
     } else if (count < 3) {
-        [[NSUserDefaults standardUserDefaults] setInteger:count forKey:@"launchCount"];
+        [[NSUserDefaults standardUserDefaults] setInteger:count forKey:@"launchCount2"];
     }
 	
     return YES;
