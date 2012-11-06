@@ -10,7 +10,7 @@
 
 
 @implementation AboutController
-@synthesize webView, version, adSwitch, adButton, spinner, dimView;
+@synthesize webView, version, adSwitch, trackSwitch, adButton, spinner, dimView;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -30,7 +30,7 @@
     if ([SKPaymentQueue canMakePayments]) {
 		NSLog(@"In-App Purchases are enabled");
 		
-		SKProductsRequest *productsRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:[NSSet setWithObject:@"com.obdurodon.kata.removeads"]];
+		SKProductsRequest *productsRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:[NSSet setWithObject:@"com.obdurodon.kata.support"]];
 		productsRequest.delegate = self;
 		[productsRequest start];
 	} else {
@@ -64,9 +64,14 @@
 	version.text = [@"Version " stringByAppendingString:theVersion];
 	
 	adSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"showAds"];
+	trackSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"track"];
 	adButton.hidden = ![[NSUserDefaults standardUserDefaults] boolForKey:@"showAds"];
     
-    dimView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 460)];
+    UIScreen *mainScreen = [UIScreen mainScreen];
+    UIScreenMode *screenMode = [mainScreen currentMode];
+    CGSize size = [screenMode size];
+
+    dimView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)];
     dimView.backgroundColor = [UIColor blackColor];
     dimView.alpha = 0.0f;
     dimView.userInteractionEnabled = NO;
@@ -107,9 +112,14 @@
 	[[NSUserDefaults standardUserDefaults] synchronize];
 }
 
+- (IBAction)trackSwitchChanged:(id)sender {
+	[[NSUserDefaults standardUserDefaults] setBool:[(UISwitch *)sender isOn] forKey:@"track"];
+	[[NSUserDefaults standardUserDefaults] synchronize];
+}
+
 - (IBAction)adButtonPressed:(id)sender
 {
-    SKPayment *payment = [SKPayment paymentWithProductIdentifier:@"com.obdurodon.kata.removeads"];
+    SKPayment *payment = [SKPayment paymentWithProductIdentifier:@"com.obdurodon.kata.support"];
 	[[SKPaymentQueue defaultQueue] addTransactionObserver:self];
 	[[SKPaymentQueue defaultQueue] addPayment:payment];
 }
@@ -159,6 +169,15 @@
                 [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"showAds"];
                 [[NSUserDefaults standardUserDefaults] synchronize];
                 adButton.hidden = YES;
+                UIAlertView *supportAlert = [[UIAlertView alloc]
+                                               initWithTitle:nil
+                                               message:@"Thanks! Your kindness has not gone unnoticed."
+                                               delegate:self
+                                               cancelButtonTitle:@"OK"
+                                               otherButtonTitles:nil];
+                [supportAlert show];
+                [supportAlert release];
+
 				
 				[[SKPaymentQueue defaultQueue] finishTransaction:transaction];
 				
@@ -171,7 +190,15 @@
                 [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"showAds"];
                 [[NSUserDefaults standardUserDefaults] synchronize];
                 adButton.hidden = YES;
-				
+                UIAlertView *supportAlert2 = [[UIAlertView alloc]
+                                             initWithTitle:nil
+                                             message:@"It looks like you've already helped out.  Thanks! Your kindness has not gone unnoticed."
+                                             delegate:self
+                                             cancelButtonTitle:@"OK"
+                                             otherButtonTitles:nil];
+                [supportAlert2 show];
+                [supportAlert2 release];
+
 				[[SKPaymentQueue defaultQueue] finishTransaction:transaction];
 				
                 [spinner stopAnimating];

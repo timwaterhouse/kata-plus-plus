@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Kata_PlusAppDelegate : NSObject <UIApplicationDelegate> {
+@interface Kata_PlusAppDelegate : NSObject <UIApplicationDelegate, UIAlertViewDelegate> {
 
     UIWindow *window;
     UINavigationController *navigationController;

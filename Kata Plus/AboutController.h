@@ -18,16 +18,19 @@
 	UIWebView *webView;
 	UILabel *version;
 	UISwitch *adSwitch;
+	UISwitch *trackSwitch;
     UIActivityIndicatorView *spinner;
     UIView *dimView;
 }
 @property (nonatomic, retain) IBOutlet UIWebView *webView;
 @property (nonatomic, retain) IBOutlet UILabel *version;
 @property (nonatomic, retain) IBOutlet UISwitch *adSwitch;
+@property (nonatomic, retain) IBOutlet UISwitch *trackSwitch;
 @property (nonatomic, retain) IBOutlet UIButton *adButton;
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView *spinner;
 @property (nonatomic, retain) UIView *dimView;
 - (IBAction)backgroundTap:(id)sender;
 - (IBAction)switchChanged:(id)sender;
+- (IBAction)trackSwitchChanged:(id)sender;
 - (IBAction)adButtonPressed:(id)sender;
 @end

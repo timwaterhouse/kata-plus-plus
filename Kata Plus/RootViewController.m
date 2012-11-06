@@ -17,9 +17,9 @@
 @synthesize kataArray, techniqueArray;
 @synthesize tableView = _tableView;
 @synthesize contentView= _contentView;
-@synthesize adBannerView = _adBannerView;
-@synthesize adBannerViewIsVisible = _adBannerViewIsVisible;
-@synthesize showAds;
+//@synthesize adBannerView = _adBannerView;
+//@synthesize adBannerViewIsVisible = _adBannerViewIsVisible;
+//@synthesize showAds;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -38,8 +38,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-	showAds = [defaults boolForKey:@"showAds"];
+//	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//	showAds = [defaults boolForKey:@"showAds"];
 	
 	NSString *kataFilePath = [self kataDataFilePath];
 	if ([[NSFileManager defaultManager] fileExistsAtPath:kataFilePath]) {
@@ -197,12 +197,12 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-	showAds = [[NSUserDefaults standardUserDefaults] boolForKey:@"showAds"];
-	if (showAds)
-		[self createAdBannerView];
+//	showAds = [[NSUserDefaults standardUserDefaults] boolForKey:@"showAds"];
+//	if (showAds)
+//		[self createAdBannerView];
 	[self.tableView reloadData];
     //	[self fixupAdView:[UIDevice currentDevice].orientation];
-	[self fixupAdView:UIInterfaceOrientationPortrait];
+//	[self fixupAdView:UIInterfaceOrientationPortrait];
 }
 
 - (void)infoButtonAction {
@@ -544,142 +544,142 @@ targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath
  }
  */
 
-#pragma mark -
-#pragma mark AdWhirl delegate methods
-- (NSString *)adWhirlApplicationKey {
-	return _MY_AD_WHIRL_APPLICATION_KEY;
-}
-
-- (UIViewController *)viewControllerForPresentingModalView {
-	return self;
-}
-
-- (void)adWhirlDidReceiveAd:(AdWhirlView *)adWhirlView {
-	_adBannerView = adWhirlView;
-	if (!_adBannerViewIsVisible) {
-		_adBannerViewIsVisible = YES;
-        //		[self fixupAdView:[UIDevice currentDevice].orientation];
-	}
-	[UIView beginAnimations:@"AdWhirlDelegate.adWhirlDidReceiveAd:"
-					context:nil];
-	
-	[UIView setAnimationDuration:0.7];
-	
-	CGSize adSize = [adWhirlView actualAdSize];
-	CGRect newFrame = adWhirlView.frame;
-	
-	newFrame.size = adSize;
-	newFrame.origin.x = (self.view.bounds.size.width - adSize.width)/ 2;
-	
-	adWhirlView.frame = newFrame;
-	
-	[UIView commitAnimations];
-    //	[self fixupAdView:[UIDevice currentDevice].orientation];
-	[self fixupAdView:UIInterfaceOrientationPortrait];
-}
-
-- (void)adWhirlDidFailToReceiveAd:(AdWhirlView *)adWhirlView usingBackup:(BOOL)yesOrNo {
-	if (_adBannerViewIsVisible) {
-		_adBannerViewIsVisible = NO;
-        //		[self fixupAdView:[UIDevice currentDevice].orientation];
-        [self fixupAdView:UIInterfaceOrientationPortrait];
-	}
-}	
-
-- (int)getBannerHeight:(UIInterfaceOrientation)orientation {
-	return [_adBannerView actualAdSize].height;
-    //	if (UIInterfaceOrientationIsLandscape(orientation)) {
-    //		return 32;
-    //	} else {
-    //		return 50;
-    //	}
-}
-
-- (int)getBannerHeight {
-    //	return [self getBannerHeight:[UIDevice currentDevice].orientation];
-	return [self getBannerHeight:UIInterfaceOrientationPortrait];
-}
-
-- (int)getBannerOriginY:(UIInterfaceOrientation)orientation {
-    //	return kScreenWidth - kStatusBarHeight - (kNavigationBarHeight - 12) - [_adBannerView actualAdSize].height;
-	if (UIInterfaceOrientationIsLandscape(orientation)) {
-		return kScreenWidth - kStatusBarHeight - (kNavigationBarHeight - 12) - [_adBannerView actualAdSize].height;
-	} else {
-		return kScreenHeight - kStatusBarHeight - kNavigationBarHeight - [_adBannerView actualAdSize].height;
-	}
-}
-
-- (int)getBannerOriginY {
-    //	return [self getBannerOriginY:[UIDevice currentDevice].orientation];
-	return [self getBannerOriginY:UIInterfaceOrientationPortrait];
-}
-
-- (void)createAdBannerView {
-	self.adBannerView = [AdWhirlView requestAdWhirlViewWithDelegate:self];
-    //	[_adBannerView setRequiredContentSizeIdentifiers:
-    //	 [NSSet setWithObjects: ADBannerContentSizeIdentifierPortrait,
-    //	  ADBannerContentSizeIdentifierLandscape, nil]];
-    //	if (UIInterfaceOrientationIsLandscape([UIDevice currentDevice].orientation)) {
-    //		[_adBannerView setCurrentContentSizeIdentifier:ADBannerContentSizeIdentifierLandscape];
-    //	} else {
-    //		[_adBannerView setCurrentContentSizeIdentifier:ADBannerContentSizeIdentifierPortrait];            
-    //	}
-	//        [_adBannerView setFrame:CGRectOffset([_adBannerView frame], 0, -[self getBannerHeight])];
-	// Hide the Ad Banner View below the bottom of the screen, instead of above the top
-	[_adBannerView setFrame:CGRectOffset([_adBannerView frame], 0, [self getBannerOriginY])];
-	[_adBannerView setDelegate:self];
-	
-	[self.view addSubview:_adBannerView];      
-    //	[self fixupAdView:[UIDevice currentDevice].orientation];
-	[self fixupAdView:UIInterfaceOrientationPortrait];
-}
-
-- (void)fixupAdView:(UIInterfaceOrientation)toInterfaceOrientation {
-	if (showAds) {
-		if (_adBannerView != nil) {        
-            //        if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation)) {
-            //            [_adBannerView setCurrentContentSizeIdentifier:ADBannerContentSizeIdentifierLandscape];
-            //        } else {
-            //            [_adBannerView setCurrentContentSizeIdentifier:ADBannerContentSizeIdentifierPortrait];
-            //        }          
-			[UIView beginAnimations:@"fixupViews" context:nil];
-			//		[UIView setAnimationDuration:0.7];
-			if (_adBannerViewIsVisible) {
-				CGRect adBannerViewFrame = [_adBannerView frame];
-                //            adBannerViewFrame.origin.x = 0;
-				if (toInterfaceOrientation == UIInterfaceOrientationPortrait) {
-					adBannerViewFrame.origin.x = (320 - [_adBannerView actualAdSize].width)/ 2;
-				} else {
-					adBannerViewFrame.origin.x = (480 - [_adBannerView actualAdSize].width)/ 2;
-				}
-                //			adBannerViewFrame.origin.x = (self.view.bounds.size.width - [_adBannerView actualAdSize].width)/ 2;
-				//			adBannerViewFrame.origin.y = 0;
-				adBannerViewFrame.origin.y = [self getBannerOriginY:toInterfaceOrientation];
-				[_adBannerView setFrame:adBannerViewFrame];
-				CGRect contentViewFrame = _contentView.frame;
-				//            contentViewFrame.origin.y = [self getBannerHeight:toInterfaceOrientation];
-				contentViewFrame.size.height = self.view.frame.size.height - [self getBannerHeight:toInterfaceOrientation];
-				_contentView.frame = contentViewFrame;
-			} else {
-				CGRect adBannerViewFrame = [_adBannerView frame];
-				adBannerViewFrame.origin.x = 0;
-				//            adBannerViewFrame.origin.y = -[self getBannerHeight:toInterfaceOrientation];
-				adBannerViewFrame.origin.y = [self getBannerOriginY:toInterfaceOrientation];
-				[_adBannerView setFrame:adBannerViewFrame];
-				CGRect contentViewFrame = _contentView.frame;
-				//            contentViewFrame.origin.y = 0;
-				contentViewFrame.size.height = self.view.frame.size.height;
-				_contentView.frame = contentViewFrame;            
-			}
-			[UIView commitAnimations];
-		}   
-	} else {
-		_adBannerView.frame = CGRectMake(0, 0, 0, 0);
-		_contentView.frame = self.view.frame;
-	}
-    
-}
-
+//#pragma mark -
+//#pragma mark AdWhirl delegate methods
+//- (NSString *)adWhirlApplicationKey {
+//	return _MY_AD_WHIRL_APPLICATION_KEY;
+//}
+//
+//- (UIViewController *)viewControllerForPresentingModalView {
+//	return self;
+//}
+//
+//- (void)adWhirlDidReceiveAd:(AdWhirlView *)adWhirlView {
+//	_adBannerView = adWhirlView;
+//	if (!_adBannerViewIsVisible) {
+//		_adBannerViewIsVisible = YES;
+//        //		[self fixupAdView:[UIDevice currentDevice].orientation];
+//	}
+//	[UIView beginAnimations:@"AdWhirlDelegate.adWhirlDidReceiveAd:"
+//					context:nil];
+//	
+//	[UIView setAnimationDuration:0.7];
+//	
+//	CGSize adSize = [adWhirlView actualAdSize];
+//	CGRect newFrame = adWhirlView.frame;
+//	
+//	newFrame.size = adSize;
+//	newFrame.origin.x = (self.view.bounds.size.width - adSize.width)/ 2;
+//	
+//	adWhirlView.frame = newFrame;
+//	
+//	[UIView commitAnimations];
+//    //	[self fixupAdView:[UIDevice currentDevice].orientation];
+//	[self fixupAdView:UIInterfaceOrientationPortrait];
+//}
+//
+//- (void)adWhirlDidFailToReceiveAd:(AdWhirlView *)adWhirlView usingBackup:(BOOL)yesOrNo {
+//	if (_adBannerViewIsVisible) {
+//		_adBannerViewIsVisible = NO;
+//        //		[self fixupAdView:[UIDevice currentDevice].orientation];
+//        [self fixupAdView:UIInterfaceOrientationPortrait];
+//	}
+//}	
+//
+//- (int)getBannerHeight:(UIInterfaceOrientation)orientation {
+//	return [_adBannerView actualAdSize].height;
+//    //	if (UIInterfaceOrientationIsLandscape(orientation)) {
+//    //		return 32;
+//    //	} else {
+//    //		return 50;
+//    //	}
+//}
+//
+//- (int)getBannerHeight {
+//    //	return [self getBannerHeight:[UIDevice currentDevice].orientation];
+//	return [self getBannerHeight:UIInterfaceOrientationPortrait];
+//}
+//
+//- (int)getBannerOriginY:(UIInterfaceOrientation)orientation {
+//    //	return kScreenWidth - kStatusBarHeight - (kNavigationBarHeight - 12) - [_adBannerView actualAdSize].height;
+//	if (UIInterfaceOrientationIsLandscape(orientation)) {
+//		return kScreenWidth - kStatusBarHeight - (kNavigationBarHeight - 12) - [_adBannerView actualAdSize].height;
+//	} else {
+//		return kScreenHeight - kStatusBarHeight - kNavigationBarHeight - [_adBannerView actualAdSize].height;
+//	}
+//}
+//
+//- (int)getBannerOriginY {
+//    //	return [self getBannerOriginY:[UIDevice currentDevice].orientation];
+//	return [self getBannerOriginY:UIInterfaceOrientationPortrait];
+//}
+//
+//- (void)createAdBannerView {
+//	self.adBannerView = [AdWhirlView requestAdWhirlViewWithDelegate:self];
+//    //	[_adBannerView setRequiredContentSizeIdentifiers:
+//    //	 [NSSet setWithObjects: ADBannerContentSizeIdentifierPortrait,
+//    //	  ADBannerContentSizeIdentifierLandscape, nil]];
+//    //	if (UIInterfaceOrientationIsLandscape([UIDevice currentDevice].orientation)) {
+//    //		[_adBannerView setCurrentContentSizeIdentifier:ADBannerContentSizeIdentifierLandscape];
+//    //	} else {
+//    //		[_adBannerView setCurrentContentSizeIdentifier:ADBannerContentSizeIdentifierPortrait];            
+//    //	}
+//	//        [_adBannerView setFrame:CGRectOffset([_adBannerView frame], 0, -[self getBannerHeight])];
+//	// Hide the Ad Banner View below the bottom of the screen, instead of above the top
+//	[_adBannerView setFrame:CGRectOffset([_adBannerView frame], 0, [self getBannerOriginY])];
+//	[_adBannerView setDelegate:self];
+//	
+//	[self.view addSubview:_adBannerView];      
+//    //	[self fixupAdView:[UIDevice currentDevice].orientation];
+//	[self fixupAdView:UIInterfaceOrientationPortrait];
+//}
+//
+//- (void)fixupAdView:(UIInterfaceOrientation)toInterfaceOrientation {
+//	if (showAds) {
+//		if (_adBannerView != nil) {        
+//            //        if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation)) {
+//            //            [_adBannerView setCurrentContentSizeIdentifier:ADBannerContentSizeIdentifierLandscape];
+//            //        } else {
+//            //            [_adBannerView setCurrentContentSizeIdentifier:ADBannerContentSizeIdentifierPortrait];
+//            //        }          
+//			[UIView beginAnimations:@"fixupViews" context:nil];
+//			//		[UIView setAnimationDuration:0.7];
+//			if (_adBannerViewIsVisible) {
+//				CGRect adBannerViewFrame = [_adBannerView frame];
+//                //            adBannerViewFrame.origin.x = 0;
+//				if (toInterfaceOrientation == UIInterfaceOrientationPortrait) {
+//					adBannerViewFrame.origin.x = (320 - [_adBannerView actualAdSize].width)/ 2;
+//				} else {
+//					adBannerViewFrame.origin.x = (480 - [_adBannerView actualAdSize].width)/ 2;
+//				}
+//                //			adBannerViewFrame.origin.x = (self.view.bounds.size.width - [_adBannerView actualAdSize].width)/ 2;
+//				//			adBannerViewFrame.origin.y = 0;
+//				adBannerViewFrame.origin.y = [self getBannerOriginY:toInterfaceOrientation];
+//				[_adBannerView setFrame:adBannerViewFrame];
+//				CGRect contentViewFrame = _contentView.frame;
+//				//            contentViewFrame.origin.y = [self getBannerHeight:toInterfaceOrientation];
+//				contentViewFrame.size.height = self.view.frame.size.height - [self getBannerHeight:toInterfaceOrientation];
+//				_contentView.frame = contentViewFrame;
+//			} else {
+//				CGRect adBannerViewFrame = [_adBannerView frame];
+//				adBannerViewFrame.origin.x = 0;
+//				//            adBannerViewFrame.origin.y = -[self getBannerHeight:toInterfaceOrientation];
+//				adBannerViewFrame.origin.y = [self getBannerOriginY:toInterfaceOrientation];
+//				[_adBannerView setFrame:adBannerViewFrame];
+//				CGRect contentViewFrame = _contentView.frame;
+//				//            contentViewFrame.origin.y = 0;
+//				contentViewFrame.size.height = self.view.frame.size.height;
+//				_contentView.frame = contentViewFrame;            
+//			}
+//			[UIView commitAnimations];
+//		}   
+//	} else {
+//		_adBannerView.frame = CGRectMake(0, 0, 0, 0);
+//		_contentView.frame = self.view.frame;
+//	}
+//    
+//}
+//
 
 
 #pragma mark -

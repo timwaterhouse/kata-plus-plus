@@ -27,6 +27,7 @@
     [self.window makeKeyAndVisible];
 	
 	[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObject:@"YES" forKey:@"showAds"]];
+	[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObject:@"YES" forKey:@"track"]];
     
     NSInteger count = [[NSUserDefaults standardUserDefaults] integerForKey:@"launchCount"];
     count++;
@@ -34,12 +35,13 @@
     if ((count == 3) & showAds) {
         UIAlertView *removeAdsAlert = [[UIAlertView alloc]
                                        initWithTitle:nil
-                                       message:@"Don't want to see ads? You can remove them \
+                                       message:@"Like this app? Want to support the developer? You can do so \
 via an In-App Purchase, available from the info screen. \
-Tap the ‘i’ button in the top left to get there!"
+Tap the ‘i’ button in the top left to get there\n\n\
+Even better, leave me a review on the App Store!"
                                        delegate:self
                                        cancelButtonTitle:@"OK"
-                                       otherButtonTitles:nil];
+                                       otherButtonTitles:@"Review", nil];
         [removeAdsAlert show];
         [removeAdsAlert release];
         [[NSUserDefaults standardUserDefaults] setInteger:count forKey:@"launchCount"];
@@ -86,6 +88,15 @@ Tap the ‘i’ button in the top left to get there!"
      Called when the application is about to terminate.
      See also applicationDidEnterBackground:.
      */
+}
+
+#pragma UIAlertView methods
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/us/app/kata++/id463372188?mt=8"]];
+    }
+
 }
 
 
