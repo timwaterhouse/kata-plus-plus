@@ -62,6 +62,7 @@
 		22E004171415BDEB00D96D3F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E004161415BDEB00D96D3F /* QuartzCore.framework */; };
 		22E004191415BDF100D96D3F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E004181415BDF100D96D3F /* SystemConfiguration.framework */; };
 		22E0041B1415BDF700D96D3F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E0041A1415BDF700D96D3F /* MessageUI.framework */; };
+		22E1A1411649681000E96DF7 /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E1A1401649681000E96DF7 /* libFlurry.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +151,8 @@
 		22E004161415BDEB00D96D3F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		22E004181415BDF100D96D3F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		22E0041A1415BDF700D96D3F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		22E1A13F1649681000E96DF7 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		22E1A1401649681000E96DF7 /* libFlurry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +174,7 @@
 				22E003291415B5C300D96D3F /* UIKit.framework in Frameworks */,
 				22E0032B1415B5C300D96D3F /* Foundation.framework in Frameworks */,
 				22E0032D1415B5C300D96D3F /* CoreGraphics.framework in Frameworks */,
+				22E1A1411649681000E96DF7 /* libFlurry.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +199,7 @@
 				22E0032E1415B5C300D96D3F /* Kata Plus */,
 				22E0034E1415B5C300D96D3F /* Kata PlusTests */,
 				22E003271415B5C300D96D3F /* Frameworks */,
+				22E1A13E1649681000E96DF7 /* Flurry */,
 				22E003251415B5C300D96D3F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -346,6 +351,15 @@
 				22E003F01415BC7F00D96D3F /* CSerializedJSONData.m */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		22E1A13E1649681000E96DF7 /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				22E1A13F1649681000E96DF7 /* Flurry.h */,
+				22E1A1401649681000E96DF7 /* libFlurry.a */,
+			);
+			path = Flurry;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -559,6 +573,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Kata Plus/GoogleAdMobAdsSDK\"",
+					"\"$(SRCROOT)/Flurry\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "078C1375-B5E7-4827-B71A-AEBD0664C945";
@@ -637,6 +652,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Kata Plus/GoogleAdMobAdsSDK\"",
+					"\"$(SRCROOT)/Flurry\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A89803A7-2EBD-4088-8804-629409DED09D";
@@ -657,6 +673,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Kata Plus/GoogleAdMobAdsSDK\"",
+					"\"$(SRCROOT)/Flurry\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;

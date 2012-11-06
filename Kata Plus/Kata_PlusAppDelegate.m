@@ -6,6 +6,7 @@
 //  Copyright 2011 NA. All rights reserved.
 //
 
+#import "Flurry.h"
 #import "Kata_PlusAppDelegate.h"
 #import "RootViewController.h"
 
@@ -18,8 +19,14 @@
 #pragma mark -
 #pragma mark Application lifecycle
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-    
+void uncaughtExceptionHandler(NSException *exception) {
+    [Flurry logError:@"Uncaught" message:@"Crash!" exception:exception];
+}
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+    [Flurry startSession:@"VNRB7HJ4RX5SZVN6N4Y2"];
     // Override point for customization after application launch.
     
     // Add the navigation controller's view to the window and display.
