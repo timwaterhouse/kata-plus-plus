@@ -26,7 +26,7 @@ void uncaughtExceptionHandler(NSException *exception) {
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
 	[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObject:@"YES" forKey:@"showAds"]];
-	[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObject:@"YES" forKey:@"track"]];
+	[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObject:@"NO" forKey:@"track"]];
     
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"track"]) {
         NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
@@ -44,6 +44,7 @@ void uncaughtExceptionHandler(NSException *exception) {
     [self.window makeKeyAndVisible];
 	
     NSInteger count = [[NSUserDefaults standardUserDefaults] integerForKey:@"launchCount2"];
+    NSLog(@"%i",count);
     count++;
 	BOOL showAds = [[NSUserDefaults standardUserDefaults] boolForKey:@"showAds"];
     if ((count == 3) & showAds) {
@@ -51,18 +52,32 @@ void uncaughtExceptionHandler(NSException *exception) {
                                        initWithTitle:nil
                                        message:@"Like this app? Want to support the developer? You can do so \
 via an In-App Purchase, available from the info screen. \
-Tap the ‘i’ button in the top left to get there\n\n\
+Tap the ‘i’ button in the top left to get there.\n\n\
 Even better, leave me a review on the App Store!"
                                        delegate:self
                                        cancelButtonTitle:@"OK"
                                        otherButtonTitles:@"Review", nil];
+        removeAdsAlert.tag = 0;
         [removeAdsAlert show];
         [removeAdsAlert release];
+        [[NSUserDefaults standardUserDefaults] setInteger:count forKey:@"launchCount2"];
+    } else if (count == 1) {
+        UIAlertView *trackUsageAlert = [[UIAlertView alloc]
+                                       initWithTitle:@"Welcome to Kata++!"
+                                       message:@"To begin, simply tap on a kata or technique and start \
+adding to your total.\n\n\
+Would you like to send anonymous usage data to help us make better apps?"
+                                       delegate:self
+                                       cancelButtonTitle:@"OK"
+                                       otherButtonTitles:@"No, thanks", nil];
+        trackUsageAlert.tag = 1;
+        [trackUsageAlert show];
+        [trackUsageAlert release];
         [[NSUserDefaults standardUserDefaults] setInteger:count forKey:@"launchCount2"];
     } else if (count < 3) {
         [[NSUserDefaults standardUserDefaults] setInteger:count forKey:@"launchCount2"];
     }
-	
+    
     return YES;
 }
 
@@ -107,10 +122,40 @@ Even better, leave me a review on the App Store!"
 #pragma UIAlertView methods
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    if (buttonIndex == 1) {
+    if (alertView.tag == 0 & buttonIndex == 1) {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/us/app/kata++/id463372188?mt=8"]];
+    } else {
+        if (alertView.tag == 1) {
+            if (buttonIndex == 0) {
+                NSLog(@"OK");
+                UIAlertView *thanksAlert = [[UIAlertView alloc]
+                                            initWithTitle:nil
+                                            message:@"Thanks!  You can always change your mind at the info screen.\
+                                            Tap the ‘i’ button in the top left to get there."
+                                            delegate:self
+                                            cancelButtonTitle:@"OK"
+                                            otherButtonTitles:nil];
+                thanksAlert.tag = 2;
+                [thanksAlert show];
+                [thanksAlert release];
+                [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"track"];
+                
+            } else {
+                NSLog(@"No, thanks");
+                UIAlertView *noThanksAlert = [[UIAlertView alloc]
+                                              initWithTitle:nil
+                                              message:@"OK.  You can always change your mind at the info screen.\
+                                              Tap the ‘i’ button in the top left to get there."
+                                              delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+                noThanksAlert.tag = 3;
+                [noThanksAlert show];
+                [noThanksAlert release];
+            }
+        }
+        
     }
-
 }
 
 
