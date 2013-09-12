@@ -40,7 +40,8 @@ void uncaughtExceptionHandler(NSException *exception) {
     // Override point for customization after application launch.
     
     // Add the navigation controller's view to the window and display.
-    [self.window addSubview:navigationController.view];
+//    [self.window addSubview:navigationController.view];
+    [self.window setRootViewController:navigationController];
     [self.window makeKeyAndVisible];
 	
     NSInteger count = [[NSUserDefaults standardUserDefaults] integerForKey:@"launchCount2"];
@@ -130,8 +131,8 @@ Would you like to send anonymous usage data to help us make better apps?"
                 NSLog(@"OK");
                 UIAlertView *thanksAlert = [[UIAlertView alloc]
                                             initWithTitle:nil
-                                            message:@"Thanks!  You can always change your mind at the info screen.\
-                                            Tap the ‘i’ button in the top left to get there."
+                                            message:@"Thanks!  You can always change your mind at the info screen. \
+Tap the ‘i’ button in the top left to get there."
                                             delegate:self
                                             cancelButtonTitle:@"OK"
                                             otherButtonTitles:nil];
@@ -144,8 +145,8 @@ Would you like to send anonymous usage data to help us make better apps?"
                 NSLog(@"No, thanks");
                 UIAlertView *noThanksAlert = [[UIAlertView alloc]
                                               initWithTitle:nil
-                                              message:@"OK.  You can always change your mind at the info screen.\
-                                              Tap the ‘i’ button in the top left to get there."
+                                              message:@"OK.  You can always change your mind at the info screen. \
+Tap the ‘i’ button in the top left to get there."
                                               delegate:self
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];

@@ -83,6 +83,20 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
+        [self setEdgesForExtendedLayout:UIRectEdgeNone];
+    }
+//    NSString *verticalConstraint = @"V:|[v]|";
+//    NSMutableDictionary *views = [NSMutableDictionary new];
+//    NSMutableArray *constraints = [NSMutableArray new];
+//    views[@"v"] = self.view;
+//    if ([self respondsToSelector:@selector(topLayoutGuide)]) {
+//        views[@"topLayoutGuide"] = self.topLayoutGuide;
+//        verticalConstraint = @"V:[topLayoutGuide][v]|";
+//    }
+//    [constraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:verticalConstraint options:0 metrics:nil views:views]];
+//    [self.view addConstraints:constraints];
 	
 	UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithTitle:@"Cancel"
 																	 style:UIBarButtonItemStylePlain

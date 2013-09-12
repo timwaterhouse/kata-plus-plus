@@ -7,8 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		221345BD17E108ED00B7418D /* Default-iOS7-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 221345BB17E108ED00B7418D /* Default-iOS7-568h@2x.png */; };
+		221345BE17E108ED00B7418D /* Default-iOS7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 221345BC17E108ED00B7418D /* Default-iOS7@2x.png */; };
+		221345C017E1145800B7418D /* Icon-144@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 221345BF17E1145800B7418D /* Icon-144@2x.png */; };
+		221345C917E123CC00B7418D /* Icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 221345C117E123CC00B7418D /* Icon-29.png */; };
+		221345CA17E123CC00B7418D /* Icon-58@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 221345C217E123CC00B7418D /* Icon-58@2x.png */; };
+		221345CB17E123CC00B7418D /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 221345C317E123CC00B7418D /* Icon-40.png */; };
+		221345CC17E123CC00B7418D /* Icon-80@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 221345C417E123CC00B7418D /* Icon-80@2x.png */; };
+		221345CD17E123CC00B7418D /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 221345C517E123CC00B7418D /* Icon-76.png */; };
+		221345CE17E123CC00B7418D /* Icon-152@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 221345C617E123CC00B7418D /* Icon-152@2x.png */; };
+		221345CF17E123CC00B7418D /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 221345C717E123CC00B7418D /* Icon-60.png */; };
+		221345D017E123CC00B7418D /* Icon-120@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 221345C817E123CC00B7418D /* Icon-120@2x.png */; };
+		221345D217E12AB300B7418D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 221345D117E12AB300B7418D /* Security.framework */; };
+		221345D617E12BBF00B7418D /* libFlurry_4.2.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 221345D517E12BBF00B7418D /* libFlurry_4.2.3.a */; };
 		2290079016121D7B00C90A5A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2290078F16121D7B00C90A5A /* Default-568h@2x.png */; };
 		229EE8251420F2520023754E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229EE8241420F2520023754E /* StoreKit.framework */; };
+		22D3D41917E1F222008C33A0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22D3D41817E1F222008C33A0 /* Images.xcassets */; };
 		22E003291415B5C300D96D3F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E003281415B5C300D96D3F /* UIKit.framework */; };
 		22E0032B1415B5C300D96D3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E0032A1415B5C300D96D3F /* Foundation.framework */; };
 		22E0032D1415B5C300D96D3F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E0032C1415B5C300D96D3F /* CoreGraphics.framework */; };
@@ -62,7 +76,6 @@
 		22E004171415BDEB00D96D3F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E004161415BDEB00D96D3F /* QuartzCore.framework */; };
 		22E004191415BDF100D96D3F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E004181415BDF100D96D3F /* SystemConfiguration.framework */; };
 		22E0041B1415BDF700D96D3F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E0041A1415BDF700D96D3F /* MessageUI.framework */; };
-		22E1A1411649681000E96DF7 /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E1A1401649681000E96DF7 /* libFlurry.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,8 +89,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2290078F16121D7B00C90A5A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		221345BB17E108ED00B7418D /* Default-iOS7-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-iOS7-568h@2x.png"; sourceTree = "<group>"; };
+		221345BC17E108ED00B7418D /* Default-iOS7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-iOS7@2x.png"; sourceTree = "<group>"; };
+		221345BF17E1145800B7418D /* Icon-144@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-144@2x.png"; path = "../../Kata Counter/icon/Icon-144@2x.png"; sourceTree = "<group>"; };
+		221345C117E123CC00B7418D /* Icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29.png"; sourceTree = "<group>"; };
+		221345C217E123CC00B7418D /* Icon-58@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-58@2x.png"; sourceTree = "<group>"; };
+		221345C317E123CC00B7418D /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
+		221345C417E123CC00B7418D /* Icon-80@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-80@2x.png"; sourceTree = "<group>"; };
+		221345C517E123CC00B7418D /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		221345C617E123CC00B7418D /* Icon-152@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-152@2x.png"; sourceTree = "<group>"; };
+		221345C717E123CC00B7418D /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
+		221345C817E123CC00B7418D /* Icon-120@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120@2x.png"; sourceTree = "<group>"; };
+		221345D117E12AB300B7418D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		221345D417E12BBF00B7418D /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		221345D517E12BBF00B7418D /* libFlurry_4.2.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_4.2.3.a; sourceTree = "<group>"; };
+		2290078F16121D7B00C90A5A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		229EE8241420F2520023754E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		22D3D41817E1F222008C33A0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		22E003241415B5C300D96D3F /* Kata Plus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kata Plus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22E003281415B5C300D96D3F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		22E0032A1415B5C300D96D3F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -151,8 +179,6 @@
 		22E004161415BDEB00D96D3F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		22E004181415BDF100D96D3F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		22E0041A1415BDF700D96D3F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		22E1A13F1649681000E96DF7 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
-		22E1A1401649681000E96DF7 /* libFlurry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +186,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				221345D217E12AB300B7418D /* Security.framework in Frameworks */,
 				229EE8251420F2520023754E /* StoreKit.framework in Frameworks */,
 				22E0041B1415BDF700D96D3F /* MessageUI.framework in Frameworks */,
 				22E004191415BDF100D96D3F /* SystemConfiguration.framework in Frameworks */,
@@ -174,7 +201,7 @@
 				22E003291415B5C300D96D3F /* UIKit.framework in Frameworks */,
 				22E0032B1415B5C300D96D3F /* Foundation.framework in Frameworks */,
 				22E0032D1415B5C300D96D3F /* CoreGraphics.framework in Frameworks */,
-				22E1A1411649681000E96DF7 /* libFlurry.a in Frameworks */,
+				221345D617E12BBF00B7418D /* libFlurry_4.2.3.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,15 +218,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		221345D317E12BBF00B7418D /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				221345D417E12BBF00B7418D /* Flurry.h */,
+				221345D517E12BBF00B7418D /* libFlurry_4.2.3.a */,
+			);
+			path = Flurry;
+			sourceTree = "<group>";
+		};
 		22E003191415B5C300D96D3F = {
 			isa = PBXGroup;
 			children = (
-				2290078F16121D7B00C90A5A /* Default-568h@2x.png */,
 				229EE8241420F2520023754E /* StoreKit.framework */,
 				22E0032E1415B5C300D96D3F /* Kata Plus */,
 				22E0034E1415B5C300D96D3F /* Kata PlusTests */,
 				22E003271415B5C300D96D3F /* Frameworks */,
-				22E1A13E1649681000E96DF7 /* Flurry */,
+				221345D317E12BBF00B7418D /* Flurry */,
 				22E003251415B5C300D96D3F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -216,6 +251,7 @@
 		22E003271415B5C300D96D3F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				221345D117E12AB300B7418D /* Security.framework */,
 				22E0041A1415BDF700D96D3F /* MessageUI.framework */,
 				22E004181415BDF100D96D3F /* SystemConfiguration.framework */,
 				22E004161415BDEB00D96D3F /* QuartzCore.framework */,
@@ -252,6 +288,7 @@
 				22E0036F1415B75800D96D3F /* UITableViewCellFixed.m */,
 				22E003DA1415BC7F00D96D3F /* TouchJSON */,
 				22E003751415B78A00D96D3F /* Resources */,
+				22D3D41817E1F222008C33A0 /* Images.xcassets */,
 				22E0032F1415B5C300D96D3F /* Supporting Files */,
 			);
 			path = "Kata Plus";
@@ -295,11 +332,23 @@
 				22E003771415B7A600D96D3F /* Icon.png */,
 				22E003781415B7A600D96D3F /* Icon@2x.png */,
 				22E003791415B7A600D96D3F /* Icon-72.png */,
+				221345BF17E1145800B7418D /* Icon-144@2x.png */,
+				221345C117E123CC00B7418D /* Icon-29.png */,
+				221345C217E123CC00B7418D /* Icon-58@2x.png */,
+				221345C317E123CC00B7418D /* Icon-40.png */,
+				221345C417E123CC00B7418D /* Icon-80@2x.png */,
+				221345C517E123CC00B7418D /* Icon-76.png */,
+				221345C617E123CC00B7418D /* Icon-152@2x.png */,
+				221345C717E123CC00B7418D /* Icon-60.png */,
+				221345C817E123CC00B7418D /* Icon-120@2x.png */,
 				22E0037A1415B7A600D96D3F /* Icon-Small.png */,
 				22E0037B1415B7A600D96D3F /* Icon-Small-50.png */,
 				22E0037C1415B7A600D96D3F /* Icon-Small@2x.png */,
 				22E0037D1415B7A600D96D3F /* Default.png */,
 				22E0037E1415B7A600D96D3F /* Default@2x.png */,
+				2290078F16121D7B00C90A5A /* Default-568h@2x.png */,
+				221345BB17E108ED00B7418D /* Default-iOS7-568h@2x.png */,
+				221345BC17E108ED00B7418D /* Default-iOS7@2x.png */,
 				22E0037F1415B7A600D96D3F /* logo.png */,
 				22E003801415B7A600D96D3F /* logo@2x.png */,
 				22E003811415B7A600D96D3F /* AboutController.xib */,
@@ -353,15 +402,6 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
-		22E1A13E1649681000E96DF7 /* Flurry */ = {
-			isa = PBXGroup;
-			children = (
-				22E1A13F1649681000E96DF7 /* Flurry.h */,
-				22E1A1401649681000E96DF7 /* libFlurry.a */,
-			);
-			path = Flurry;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -407,8 +447,13 @@
 		22E0031B1415B5C300D96D3F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = NA;
+				TargetAttributes = {
+					22E003231415B5C300D96D3F = {
+						DevelopmentTeam = PNSBQ4QZX7;
+					};
+				};
 			};
 			buildConfigurationList = 22E0031E1415B5C300D96D3F /* Build configuration list for PBXProject "Kata Plus" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -434,20 +479,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				22E003331415B5C300D96D3F /* InfoPlist.strings in Resources */,
+				221345BD17E108ED00B7418D /* Default-iOS7-568h@2x.png in Resources */,
 				22E003851415B7A600D96D3F /* iTunesArtwork in Resources */,
 				22E003861415B7A600D96D3F /* Icon.png in Resources */,
 				22E003871415B7A600D96D3F /* Icon@2x.png in Resources */,
 				22E003881415B7A600D96D3F /* Icon-72.png in Resources */,
 				22E003891415B7A600D96D3F /* Icon-Small.png in Resources */,
 				22E0038A1415B7A600D96D3F /* Icon-Small-50.png in Resources */,
+				221345CA17E123CC00B7418D /* Icon-58@2x.png in Resources */,
+				221345CC17E123CC00B7418D /* Icon-80@2x.png in Resources */,
 				22E0038B1415B7A600D96D3F /* Icon-Small@2x.png in Resources */,
 				22E0038C1415B7A600D96D3F /* Default.png in Resources */,
+				221345CB17E123CC00B7418D /* Icon-40.png in Resources */,
 				22E0038D1415B7A600D96D3F /* Default@2x.png in Resources */,
+				221345CF17E123CC00B7418D /* Icon-60.png in Resources */,
+				221345CE17E123CC00B7418D /* Icon-152@2x.png in Resources */,
+				221345C017E1145800B7418D /* Icon-144@2x.png in Resources */,
 				22E0038E1415B7A600D96D3F /* logo.png in Resources */,
 				22E0038F1415B7A600D96D3F /* logo@2x.png in Resources */,
+				221345C917E123CC00B7418D /* Icon-29.png in Resources */,
 				22E003901415B7A600D96D3F /* AboutController.xib in Resources */,
 				22E003911415B7A600D96D3F /* DetailController.xib in Resources */,
+				221345BE17E108ED00B7418D /* Default-iOS7@2x.png in Resources */,
 				22E003921415B7A600D96D3F /* RootViewController.xib in Resources */,
+				221345CD17E123CC00B7418D /* Icon-76.png in Resources */,
+				221345D017E123CC00B7418D /* Icon-120@2x.png in Resources */,
+				22D3D41917E1F222008C33A0 /* Images.xcassets in Resources */,
 				22E003931415B7A600D96D3F /* MainWindow.xib in Resources */,
 				2290079016121D7B00C90A5A /* Default-568h@2x.png in Resources */,
 			);
@@ -547,14 +604,15 @@
 		229EE7A41415C1710023754E /* Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Timothy Waterhouse (NGLU4UZH43)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Timothy Waterhouse (NGLU4UZH43)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "2AF44E58-EB14-400F-BBDB-4B3C603422D8";
 				SDKROOT = iphoneos;
 			};
 			name = Distribution;
@@ -563,20 +621,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Obdurodon LLC";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Timothy Waterhouse (NGLU4UZH43)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Timothy Waterhouse (NGLU4UZH43)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kata Plus/Kata Plus-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Kata Plus/Kata Plus-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Kata Plus/GoogleAdMobAdsSDK\"",
-					"\"$(SRCROOT)/Flurry\"",
+					"/Users/tim/code/Kata\\ Plus/Flurry",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DB00BE73-14EF-44E0-8308-A23A1F040E9E";
+				PROVISIONING_PROFILE = "6C269FFB-D0BD-43DE-A5E9-C5211E9C2C4A";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6C269FFB-D0BD-43DE-A5E9-C5211E9C2C4A";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -587,6 +648,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Kata Plus.app/Kata Plus";
+				CODE_SIGN_IDENTITY = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
@@ -608,16 +670,18 @@
 		22E003591415B5C300D96D3F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Timothy Waterhouse (NGLU4UZH43)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Timothy Waterhouse (NGLU4UZH43)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "2AF44E58-EB14-400F-BBDB-4B3C603422D8";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -625,14 +689,15 @@
 		22E0035A1415B5C300D96D3F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Timothy Waterhouse (NGLU4UZH43)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Timothy Waterhouse (NGLU4UZH43)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "2AF44E58-EB14-400F-BBDB-4B3C603422D8";
 				SDKROOT = iphoneos;
 			};
 			name = Release;
@@ -641,6 +706,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Timothy Waterhouse (NGLU4UZH43)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Timothy Waterhouse (NGLU4UZH43)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -648,14 +716,14 @@
 				GCC_PREFIX_HEADER = "Kata Plus/Kata Plus-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Kata Plus/Kata Plus-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Kata Plus/GoogleAdMobAdsSDK\"",
-					"\"$(SRCROOT)/Flurry\"",
+					"/Users/tim/code/Kata\\ Plus/Flurry",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D5E95FB6-79BD-4156-9406-C3D8D16FAAE7";
+				PROVISIONING_PROFILE = "6C269FFB-D0BD-43DE-A5E9-C5211E9C2C4A";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6C269FFB-D0BD-43DE-A5E9-C5211E9C2C4A";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -664,20 +732,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Obdurodon LLC";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Timothy Waterhouse (NGLU4UZH43)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Timothy Waterhouse (NGLU4UZH43)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kata Plus/Kata Plus-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Kata Plus/Kata Plus-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Kata Plus/GoogleAdMobAdsSDK\"",
-					"\"$(SRCROOT)/Flurry\"",
+					"/Users/tim/code/Kata\\ Plus/Flurry",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DB00BE73-14EF-44E0-8308-A23A1F040E9E";
+				PROVISIONING_PROFILE = "6C269FFB-D0BD-43DE-A5E9-C5211E9C2C4A";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6C269FFB-D0BD-43DE-A5E9-C5211E9C2C4A";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -688,6 +759,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Kata Plus.app/Kata Plus";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
@@ -711,6 +784,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Kata Plus.app/Kata Plus";
+				CODE_SIGN_IDENTITY = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
