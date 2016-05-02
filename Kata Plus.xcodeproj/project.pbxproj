@@ -19,7 +19,9 @@
 		221345CF17E123CC00B7418D /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 221345C717E123CC00B7418D /* Icon-60.png */; };
 		221345D017E123CC00B7418D /* Icon-120@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 221345C817E123CC00B7418D /* Icon-120@2x.png */; };
 		221345D217E12AB300B7418D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 221345D117E12AB300B7418D /* Security.framework */; };
-		221345D617E12BBF00B7418D /* libFlurry_4.2.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 221345D517E12BBF00B7418D /* libFlurry_4.2.3.a */; };
+		223130551CD7909B00CEDA8B /* FlurryEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = 223130511CD7909B00CEDA8B /* FlurryEmpty.m */; };
+		223130561CD7909B00CEDA8B /* libFlurry_7.6.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 223130531CD7909B00CEDA8B /* libFlurry_7.6.0.a */; };
+		223130571CD7909B00CEDA8B /* libFlurryWatch_7.6.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 223130541CD7909B00CEDA8B /* libFlurryWatch_7.6.0.a */; };
 		2290079016121D7B00C90A5A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2290078F16121D7B00C90A5A /* Default-568h@2x.png */; };
 		229EE8251420F2520023754E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229EE8241420F2520023754E /* StoreKit.framework */; };
 		22D3D41917E1F222008C33A0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22D3D41817E1F222008C33A0 /* Images.xcassets */; };
@@ -101,8 +103,11 @@
 		221345C717E123CC00B7418D /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
 		221345C817E123CC00B7418D /* Icon-120@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120@2x.png"; sourceTree = "<group>"; };
 		221345D117E12AB300B7418D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		221345D417E12BBF00B7418D /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
-		221345D517E12BBF00B7418D /* libFlurry_4.2.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_4.2.3.a; sourceTree = "<group>"; };
+		223130501CD7909B00CEDA8B /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		223130511CD7909B00CEDA8B /* FlurryEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlurryEmpty.m; sourceTree = "<group>"; };
+		223130521CD7909B00CEDA8B /* FlurryWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryWatch.h; sourceTree = "<group>"; };
+		223130531CD7909B00CEDA8B /* libFlurry_7.6.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_7.6.0.a; sourceTree = "<group>"; };
+		223130541CD7909B00CEDA8B /* libFlurryWatch_7.6.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurryWatch_7.6.0.a; sourceTree = "<group>"; };
 		2290078F16121D7B00C90A5A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		229EE8241420F2520023754E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		22D3D41817E1F222008C33A0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -189,6 +194,7 @@
 				221345D217E12AB300B7418D /* Security.framework in Frameworks */,
 				229EE8251420F2520023754E /* StoreKit.framework in Frameworks */,
 				22E0041B1415BDF700D96D3F /* MessageUI.framework in Frameworks */,
+				223130561CD7909B00CEDA8B /* libFlurry_7.6.0.a in Frameworks */,
 				22E004191415BDF100D96D3F /* SystemConfiguration.framework in Frameworks */,
 				22E004171415BDEB00D96D3F /* QuartzCore.framework in Frameworks */,
 				22E004151415BDE600D96D3F /* libz.dylib in Frameworks */,
@@ -200,8 +206,8 @@
 				22E004091415BD8C00D96D3F /* CoreLocation.framework in Frameworks */,
 				22E003291415B5C300D96D3F /* UIKit.framework in Frameworks */,
 				22E0032B1415B5C300D96D3F /* Foundation.framework in Frameworks */,
+				223130571CD7909B00CEDA8B /* libFlurryWatch_7.6.0.a in Frameworks */,
 				22E0032D1415B5C300D96D3F /* CoreGraphics.framework in Frameworks */,
-				221345D617E12BBF00B7418D /* libFlurry_4.2.3.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,11 +224,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		221345D317E12BBF00B7418D /* Flurry */ = {
+		2231304F1CD7909B00CEDA8B /* Flurry */ = {
 			isa = PBXGroup;
 			children = (
-				221345D417E12BBF00B7418D /* Flurry.h */,
-				221345D517E12BBF00B7418D /* libFlurry_4.2.3.a */,
+				223130501CD7909B00CEDA8B /* Flurry.h */,
+				223130511CD7909B00CEDA8B /* FlurryEmpty.m */,
+				223130521CD7909B00CEDA8B /* FlurryWatch.h */,
+				223130531CD7909B00CEDA8B /* libFlurry_7.6.0.a */,
+				223130541CD7909B00CEDA8B /* libFlurryWatch_7.6.0.a */,
 			);
 			path = Flurry;
 			sourceTree = "<group>";
@@ -233,8 +242,8 @@
 				229EE8241420F2520023754E /* StoreKit.framework */,
 				22E0032E1415B5C300D96D3F /* Kata Plus */,
 				22E0034E1415B5C300D96D3F /* Kata PlusTests */,
+				2231304F1CD7909B00CEDA8B /* Flurry */,
 				22E003271415B5C300D96D3F /* Frameworks */,
-				221345D317E12BBF00B7418D /* Flurry */,
 				22E003251415B5C300D96D3F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -439,7 +448,7 @@
 			name = "Kata PlusTests";
 			productName = "Kata PlusTests";
 			productReference = 22E003481415B5C300D96D3F /* Kata PlusTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -554,6 +563,7 @@
 				22E003F21415BC7F00D96D3F /* CDataScanner_Extensions.m in Sources */,
 				22E003F31415BC7F00D96D3F /* NSCharacterSet_Extensions.m in Sources */,
 				22E003F41415BC7F00D96D3F /* NSDictionary_JSONExtensions.m in Sources */,
+				223130551CD7909B00CEDA8B /* FlurryEmpty.m in Sources */,
 				22E003F51415BC7F00D96D3F /* NSScanner_Extensions.m in Sources */,
 				22E003F61415BC7F00D96D3F /* CJSONDataSerializer.m in Sources */,
 				22E003F71415BC7F00D96D3F /* CJSONDeserializer.m in Sources */,
@@ -612,7 +622,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "2AF44E58-EB14-400F-BBDB-4B3C603422D8";
+				PROVISIONING_PROFILE = "5d5fb300-9a84-4274-a935-eba5e0229dbd";
 				SDKROOT = iphoneos;
 			};
 			name = Distribution;
@@ -633,11 +643,13 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/tim/code/Kata\\ Plus/Flurry",
+					/Users/tim/code/Kata,
+					Plus/Flurry,
+					"$(PROJECT_DIR)/Flurry",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6C269FFB-D0BD-43DE-A5E9-C5211E9C2C4A";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6C269FFB-D0BD-43DE-A5E9-C5211E9C2C4A";
+				PROVISIONING_PROFILE = "5d5fb300-9a84-4274-a935-eba5e0229dbd";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5d5fb300-9a84-4274-a935-eba5e0229dbd";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -681,7 +693,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "2AF44E58-EB14-400F-BBDB-4B3C603422D8";
+				PROVISIONING_PROFILE = "5d5fb300-9a84-4274-a935-eba5e0229dbd";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -697,7 +709,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "2AF44E58-EB14-400F-BBDB-4B3C603422D8";
+				PROVISIONING_PROFILE = "5d5fb300-9a84-4274-a935-eba5e0229dbd";
 				SDKROOT = iphoneos;
 			};
 			name = Release;
@@ -719,11 +731,13 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/tim/code/Kata\\ Plus/Flurry",
+					/Users/tim/code/Kata,
+					Plus/Flurry,
+					"$(PROJECT_DIR)/Flurry",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6C269FFB-D0BD-43DE-A5E9-C5211E9C2C4A";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6C269FFB-D0BD-43DE-A5E9-C5211E9C2C4A";
+				PROVISIONING_PROFILE = "5d5fb300-9a84-4274-a935-eba5e0229dbd";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5d5fb300-9a84-4274-a935-eba5e0229dbd";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -744,11 +758,13 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/tim/code/Kata\\ Plus/Flurry",
+					/Users/tim/code/Kata,
+					Plus/Flurry,
+					"$(PROJECT_DIR)/Flurry",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6C269FFB-D0BD-43DE-A5E9-C5211E9C2C4A";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6C269FFB-D0BD-43DE-A5E9-C5211E9C2C4A";
+				PROVISIONING_PROFILE = "5d5fb300-9a84-4274-a935-eba5e0229dbd";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5d5fb300-9a84-4274-a935-eba5e0229dbd";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
