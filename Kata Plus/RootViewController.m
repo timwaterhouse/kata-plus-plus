@@ -208,7 +208,7 @@
 - (void)infoButtonAction {
 	AboutController *aboutController = [[AboutController alloc] init];
 	aboutController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-	[self presentModalViewController:aboutController animated:YES];
+	[self presentViewController:aboutController animated:YES completion:nil];
 	[aboutController release];
 }
 
@@ -441,7 +441,7 @@ targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath
 	}
 	
 	// Make sure we can't drag rows past the "add new" row
-	int theCount;
+	NSUInteger theCount;
 	if ([sourceIndexPath section] == kKataSection)
 		theCount = [kataArray count];
 	else 

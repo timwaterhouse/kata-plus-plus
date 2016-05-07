@@ -10,7 +10,7 @@
 
 
 @implementation AboutController
-@synthesize webView, version, adSwitch, trackSwitch, adButton, spinner, dimView;
+@synthesize webView, version, adSwitch, trackSwitch, adButton, spinner, dimView, validProduct;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -81,7 +81,7 @@
 
 - (IBAction)backgroundTap:(id)sender {
 //	[self.navigationController setNavigationBarHidden:NO];
-	[self dismissModalViewControllerAnimated:YES];
+	[self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
@@ -119,31 +119,31 @@
 
 - (IBAction)adButtonPressed:(id)sender
 {
-    SKPayment *payment = [SKPayment paymentWithProductIdentifier:@"com.obdurodon.kata.support"];
+    SKPayment *payment = [SKPayment paymentWithProduct:self.validProduct];
 	[[SKPaymentQueue defaultQueue] addTransactionObserver:self];
 	[[SKPaymentQueue defaultQueue] addPayment:payment];
 }
 
 - (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response {
-	SKProduct *validProduct = nil;
-	int count = [response.products count];
+	self.validProduct = nil;
+	NSUInteger count = [response.products count];
 	if (count > 0) {
-		validProduct = [response.products objectAtIndex:0];
-	} else if (!validProduct) {
+		self.validProduct = [response.products objectAtIndex:0];
+	} else if (!self.validProduct) {
 		NSLog(@"No products available");
 	}
     
-    if (validProduct)
+    if (self.validProduct)
     {
-        NSLog(@"Product title: %@" , validProduct.localizedTitle);
-        NSLog(@"Product description: %@" , validProduct.localizedDescription);
-        NSLog(@"Product price: %@" , validProduct.price);
-        NSLog(@"Product id: %@" , validProduct.productIdentifier);
+        NSLog(@"Product title: %@" , self.validProduct.localizedTitle);
+        NSLog(@"Product description: %@" , self.validProduct.localizedDescription);
+        NSLog(@"Product price: %@" , self.validProduct.price);
+        NSLog(@"Product id: %@" , self.validProduct.productIdentifier);
         NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
         [numberFormatter setFormatterBehavior:NSNumberFormatterBehavior10_4];
         [numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
-        [numberFormatter setLocale:validProduct.priceLocale];
-        NSString *formattedString = [numberFormatter stringFromNumber:validProduct.price];
+        [numberFormatter setLocale:self.validProduct.priceLocale];
+        NSString *formattedString = [numberFormatter stringFromNumber:self.validProduct.price];
         [numberFormatter release];
         NSLog(@"Localised Product price: %@" , formattedString);
     }
@@ -217,6 +217,9 @@
                 dimView.alpha = 0.0f;
                 self.view.userInteractionEnabled = YES;
 				break;
+                
+            case SKPaymentTransactionStateDeferred:
+                break;
 		}
 	}
 }

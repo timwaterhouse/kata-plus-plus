@@ -45,7 +45,7 @@ void uncaughtExceptionHandler(NSException *exception) {
     [self.window makeKeyAndVisible];
 	
     NSInteger count = [[NSUserDefaults standardUserDefaults] integerForKey:@"launchCount2"];
-    NSLog(@"%i",count);
+    NSLog(@"%li",(long)count);
     count++;
 	BOOL showAds = [[NSUserDefaults standardUserDefaults] boolForKey:@"showAds"];
     if ((count == 3) & showAds) {

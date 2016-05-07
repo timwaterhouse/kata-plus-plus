@@ -44,7 +44,7 @@
 
 - (IBAction)save:(id)sender {
 	if (textFieldBeingEdited != nil) {
-		NSNumber *tagAsNum = [[NSNumber alloc] initWithInt:textFieldBeingEdited.tag];
+		NSNumber *tagAsNum = [[NSNumber alloc] initWithLong:textFieldBeingEdited.tag];
 		[tempValues setObject:textFieldBeingEdited.text forKey:tagAsNum];
 		[tagAsNum release];
 	}
@@ -115,7 +115,7 @@
 	NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
 	self.tempValues = dict;
 	[dict release];
-	[tempValues setObject:[NSNumber numberWithInt:kata.total] forKey:[NSNumber numberWithInt:1]];
+	[tempValues setObject:[NSNumber numberWithUnsignedInteger:kata.total] forKey:[NSNumber numberWithInt:1]];
 	
 	self.nameField.text = kata.name;
 	NSNumberFormatter *nf = [[NSNumberFormatter alloc] init];
@@ -176,7 +176,7 @@
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
-	NSNumber *tagAsNum = [[NSNumber alloc] initWithInt:textField.tag];
+	NSNumber *tagAsNum = [[NSNumber alloc] initWithInteger:textField.tag];
 	[tempValues setObject:textField.text forKey:tagAsNum];
 	[tagAsNum release];
 }

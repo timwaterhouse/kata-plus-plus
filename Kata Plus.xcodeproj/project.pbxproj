@@ -21,7 +21,6 @@
 		221345D217E12AB300B7418D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 221345D117E12AB300B7418D /* Security.framework */; };
 		223130551CD7909B00CEDA8B /* FlurryEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = 223130511CD7909B00CEDA8B /* FlurryEmpty.m */; };
 		223130561CD7909B00CEDA8B /* libFlurry_7.6.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 223130531CD7909B00CEDA8B /* libFlurry_7.6.0.a */; };
-		223130571CD7909B00CEDA8B /* libFlurryWatch_7.6.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 223130541CD7909B00CEDA8B /* libFlurryWatch_7.6.0.a */; };
 		2290079016121D7B00C90A5A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2290078F16121D7B00C90A5A /* Default-568h@2x.png */; };
 		229EE8251420F2520023754E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229EE8241420F2520023754E /* StoreKit.framework */; };
 		22D3D41917E1F222008C33A0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22D3D41817E1F222008C33A0 /* Images.xcassets */; };
@@ -105,9 +104,7 @@
 		221345D117E12AB300B7418D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		223130501CD7909B00CEDA8B /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
 		223130511CD7909B00CEDA8B /* FlurryEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlurryEmpty.m; sourceTree = "<group>"; };
-		223130521CD7909B00CEDA8B /* FlurryWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryWatch.h; sourceTree = "<group>"; };
 		223130531CD7909B00CEDA8B /* libFlurry_7.6.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_7.6.0.a; sourceTree = "<group>"; };
-		223130541CD7909B00CEDA8B /* libFlurryWatch_7.6.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurryWatch_7.6.0.a; sourceTree = "<group>"; };
 		2290078F16121D7B00C90A5A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		229EE8241420F2520023754E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		22D3D41817E1F222008C33A0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -206,7 +203,6 @@
 				22E004091415BD8C00D96D3F /* CoreLocation.framework in Frameworks */,
 				22E003291415B5C300D96D3F /* UIKit.framework in Frameworks */,
 				22E0032B1415B5C300D96D3F /* Foundation.framework in Frameworks */,
-				223130571CD7909B00CEDA8B /* libFlurryWatch_7.6.0.a in Frameworks */,
 				22E0032D1415B5C300D96D3F /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,9 +225,7 @@
 			children = (
 				223130501CD7909B00CEDA8B /* Flurry.h */,
 				223130511CD7909B00CEDA8B /* FlurryEmpty.m */,
-				223130521CD7909B00CEDA8B /* FlurryWatch.h */,
 				223130531CD7909B00CEDA8B /* libFlurry_7.6.0.a */,
-				223130541CD7909B00CEDA8B /* libFlurryWatch_7.6.0.a */,
 			);
 			path = Flurry;
 			sourceTree = "<group>";
@@ -456,11 +450,11 @@
 		22E0031B1415B5C300D96D3F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = NA;
 				TargetAttributes = {
 					22E003231415B5C300D96D3F = {
-						DevelopmentTeam = PNSBQ4QZX7;
+						DevelopmentTeam = LHX3L6H543;
 					};
 				};
 			};
@@ -614,15 +608,15 @@
 		229EE7A41415C1710023754E /* Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Timothy Waterhouse (NGLU4UZH43)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Timothy Waterhouse (NGLU4UZH43)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "5d5fb300-9a84-4274-a935-eba5e0229dbd";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Distribution;
@@ -633,23 +627,22 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Timothy Waterhouse (NGLU4UZH43)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Timothy Waterhouse (NGLU4UZH43)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kata Plus/Kata Plus-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Kata Plus/Kata Plus-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/tim/code/Kata,
-					Plus/Flurry,
 					"$(PROJECT_DIR)/Flurry",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.obdurodon.kata--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5d5fb300-9a84-4274-a935-eba5e0229dbd";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5d5fb300-9a84-4274-a935-eba5e0229dbd";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -673,6 +666,7 @@
 					"-framework",
 					SenTestingKit,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.obdurodon.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -682,8 +676,9 @@
 		22E003591415B5C300D96D3F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Timothy Waterhouse (NGLU4UZH43)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Timothy Waterhouse (NGLU4UZH43)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -691,9 +686,9 @@
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "5d5fb300-9a84-4274-a935-eba5e0229dbd";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -701,15 +696,15 @@
 		22E0035A1415B5C300D96D3F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Timothy Waterhouse (NGLU4UZH43)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Timothy Waterhouse (NGLU4UZH43)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "5d5fb300-9a84-4274-a935-eba5e0229dbd";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Release;
@@ -720,24 +715,23 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Timothy Waterhouse (NGLU4UZH43)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Timothy Waterhouse (NGLU4UZH43)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kata Plus/Kata Plus-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Kata Plus/Kata Plus-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/tim/code/Kata,
-					Plus/Flurry,
 					"$(PROJECT_DIR)/Flurry",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.obdurodon.kata--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5d5fb300-9a84-4274-a935-eba5e0229dbd";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5d5fb300-9a84-4274-a935-eba5e0229dbd";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -748,23 +742,22 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Timothy Waterhouse (NGLU4UZH43)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Timothy Waterhouse (NGLU4UZH43)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kata Plus/Kata Plus-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Kata Plus/Kata Plus-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/tim/code/Kata,
-					Plus/Flurry,
 					"$(PROJECT_DIR)/Flurry",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.obdurodon.kata--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5d5fb300-9a84-4274-a935-eba5e0229dbd";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5d5fb300-9a84-4274-a935-eba5e0229dbd";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -789,6 +782,7 @@
 					"-framework",
 					SenTestingKit,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.obdurodon.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -813,6 +807,7 @@
 					"-framework",
 					SenTestingKit,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.obdurodon.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;

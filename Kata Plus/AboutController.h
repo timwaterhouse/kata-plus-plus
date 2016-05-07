@@ -29,6 +29,7 @@
 @property (nonatomic, retain) IBOutlet UIButton *adButton;
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView *spinner;
 @property (nonatomic, retain) UIView *dimView;
+@property (strong, nonatomic) SKProduct *validProduct;
 - (IBAction)backgroundTap:(id)sender;
 - (IBAction)switchChanged:(id)sender;
 - (IBAction)trackSwitchChanged:(id)sender;
