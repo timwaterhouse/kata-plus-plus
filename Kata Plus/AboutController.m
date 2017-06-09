@@ -47,8 +47,7 @@
 					</head>\
 					<body>\
 					<center>\
-					Obdurodon LLC<br>\
-					<a href=\"http://obdurodon.com\">obdurodon.com</a><br>\
+					Timothy Waterhouse<br>\
 					<a href=\"mailto:support@obdurodon.com\">support@obdurodon.com</a>\
 					</center>\
 					</body>\
